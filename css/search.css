@@ -1,0 +1,167 @@
+:root {
+  --anchoFormulario: 6%;
+  --anchoInput: 0%;
+  --anchoBoton: 100%;
+  --bgPurple: rgb(68, 151, 57);
+  --visibility: none;
+}
+
+form {
+  width: var(--anchoFormulario);
+  height: 14%;
+  background-color: var(--bgPurple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 2rem;
+  transition: width 0.4s, height 0.4s;
+  z-index: 10;
+}
+
+form>input,
+form>input:placeholder-shown {
+  outline: none;
+  background-color: var(--bgPurple);
+  text-align: center;
+  width: var(--anchoInput);
+  height: 100%;
+  border-radius: .5em 0 0 .5em;
+  color: black;
+  border: none;
+  transition: width 0.5s;
+  line-height: normal;
+  color: white;
+  display: var(--visibility);
+  transition: 1s;
+}
+
+input::placeholder {
+  color: white;
+  opacity: .6;
+}
+
+form>button {
+  width: var(--anchoBoton);
+  height: 100%;
+  border-radius: 0 .5em .5em 0;
+  background-color: var(--bgPurple);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 1rem 1rem 0;
+  transition: width 0.4s;
+}
+
+form:hover {
+  --anchoFormulario: 28%;
+  --anchoInput: 80%;
+  --anchoBoton: 20%;
+  --visibility: flex;
+}
+
+form:hover>input {
+  --visibility: flex;
+  width: var(--anchoInput);
+}
+
+form:hover>button {
+  width: var(--anchoBoton);
+}
+
+
+.icon-search {
+  position: relative;
+  object-fit: contain;
+  width: 50%;
+  height: 50%;
+  filter: invert(1);
+}
+
+form>button:hover {
+  background-color: var(--bgPurple);
+}
+
+@media (min-width:1400px) {
+  :root {
+    --anchoFormulario: 6%;
+    --anchoInput: 0%;
+    --anchoBoton: 100%;
+  }
+
+  form:hover {
+    --anchoFormulario: 35%;
+    --anchoInput: 80%;
+    --anchoBoton: 20%;
+  }
+
+  form:hover>input {
+    width: var(--anchoInput);
+  }
+
+  form:hover>button {
+    width: var(--anchoBoton);
+  }
+}
+
+@media (max-width:1050px) {
+  :root {
+    --anchoFormulario: 6%;
+  }
+
+  form:hover {
+    --anchoFormulario: 40%;
+  }
+}
+
+@media (max-width:900px) {
+  :root {
+    --anchoFormulario: 8%;
+  }
+
+  form:hover {
+    --anchoFormulario: 45%;
+  }
+}
+
+@media (max-width:770px) {
+  :root {
+    --anchoFormulario: 10%;
+  }
+
+  form:hover {
+    --anchoFormulario: 55%;
+  }
+}
+
+@media (max-width:620px) {
+  :root {
+    --anchoFormulario: 12%;
+  }
+
+  form:hover {
+    --anchoFormulario: 70%;
+  }
+}
+
+@media (max-width:520px) {
+  :root {
+    --anchoFormulario: 14%;
+  }
+
+  form:hover {
+    --anchoFormulario: 80%;
+  }
+}
+
+@media (max-width:440px) {
+  :root {
+    --anchoFormulario: 18%;
+  }
+
+  form:hover {
+    --anchoFormulario: 90%;
+  }
+}

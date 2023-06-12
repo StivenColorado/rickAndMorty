@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/search.css" />
+  <link rel="stylesheet" href="./css/cards.css" />
+  <link rel="stylesheet" href="./css/avisos.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="shortcut icon" href="./img/morty_icon.png" type="image/x-icon" />
+  <title>Rick & Morty</title>
+</head>
+<body>
+  <!--aqui esta el menu y el buscador-->
+  <header>
+    <div class="banner">
+      <!--aqui esta el nav, banner esta con display flex -->
+      <nav>
+        <div class="container">
+          <div class="img-logo">
+            <img class="logo" src="./img/logoburnedinleft.png" alt="logo" />
+          </div>
+          <ul class="links">
+            <li class="link">
+              <a class="url" href="index.html">Personajes</a>
+            </li>
+            <li class="link"><a class="url" href="./Pages/locations.html">Locaciones</a></li>
+            <li class="link">
+              <a class="url" href="./pages/episode.html">Episodios</a>
+            </li>
+          </ul>
+          <div class="toggle">
+            <img onclick="openNav()" src="./img/lista.png" class="menu" alt="menu" />
+          </div>
+        </div>
+        <div class="overlay" id="mobile-menu">
+          <div class="derecha">
+            <img onclick="closeNav()" src="./img/cerrar.png" class="cerrar" alt="close" />
+          </div>
+          <div class="overlay-content">
+            <a href="./index.html">Personajes</a>
+            <a href="./Pages/locations.html">Locaciones</a>
+            <a href="./Pages/episode.html">Episodios</a>
+          </div>
+        </div>
+      </nav>
+      <form method="dialog">
+        <input class="buscador-personajes" type="text" name="character-name" id="input_character_name"
+          placeholder="search any character here!" autocomplete="off"/>
+        <button class="buscador-personajes" type="submit" id="btn_search" onclick="searchCharacter()">
+          <img class="icon-search" src="./img/search_icon.png" alt="" srcset="" />
+        </button>
+      </form>
+    </div>
+  </header>
+  <!--este contenedor se reutilizara -->
+  <div class="pantalla-negra"></div>
+  <!--cuando se presione buscar-->
+  <div class="pantalla" id="pantalla">
+    <span class="sub_footer_info"> creado 0202 </span>
+    <div class="info" id="info_personaje">
+      <div class="btn_close">X</div>
+      <div class="container-img-character">
+        <img class="img_person" src="" alt="" />
+        <span class="state"><b></b></span>
+      </div>
+      <div class="texto">
+        <h1 class="title">Title</h1>
+        <!--contenedor de iconos-->
+        <div class="container-gender-specie">
+          <div class="box-gs">
+            <span class="gender"><b>Gender:</b></span>
+            <div class="icon-gs-1"></div>
+          </div>
+          <div class="box-gs">
+            <span class="species human"><b>Species:</b></span>
+            <div class="icon-gs-2 "></div>
+          </div>
+        </div>
+        <span class="origin"><b>Origin:</b></span>
+        <span class="location"><b>Location:</b></span>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="titulo_main">Personajes</h1>
+  <main></main>
+  <div class="contenedor_paginador">
+    <div class="pagination">
+      <p>pages</p>
+    </div>
+  </div>
+  <footer>
+    <div class="info-footer">
+      <h1 class="character-count">Personajes: 811</h1>
+      <h1 class="location-count">locaiones: 128</h1>
+      <h1 class="episodes-acount">Episodios: 51</h1>
+    </div>
+    <div class="contenedor-iconos">
+      <span class="icon --1"></span>
+      <span class="icon --2"></span>
+      <span class="icon --3"></span>
+    </div>
+    <div class="contenedor-nombres">
+      <ul>
+        <li>
+          <> By StivenC
+        </li>
+        <li>
+          <> By Ricardo
+        </li>
+        <li>
+          <> By JuanD
+        </li>
+        <li>
+          <> By JhonH
+        </li>
+      </ul>
+    </div>
+    <div class="contenedor-nombres">
+      <ul>
+        <li>@copyright - 2023</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./js/nav-bar.js"></script>
+  <script src="./js/keyPressed.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/searchCharacter.js"></script>
+  <script src="./js/redireccionar.js"></script>
+  <script src="./js/showCharacter.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

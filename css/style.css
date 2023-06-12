@@ -1,0 +1,133 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.info_personaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.image-container {
+    display: block;
+}
+
+.image-container img {
+    border-radius: 1rem 1rem .5rem .5rem ;
+    width: 100%;
+}
+
+article {
+    padding: 10px;
+    box-shadow: 0px 0px 1px #000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    border: 5px solid transparent; 
+    border-image: linear-gradient(to bottom, #052e05 0%, #030a3a 100%) 1; 
+}
+
+article:hover{
+    transition: .5s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(to bottom, #052e05 0%, #030a3a 100%) 1; 
+}
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/Yp1I.gif');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+.banner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(60, 147, 9);
+    background: linear-gradient(0deg, rgb(4 8 20) 15%,rgba(4, 8, 20, 0.616)80%);
+    bottom: 20%;
+}
+
+.contenedor_paginador{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pagination{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.boton-pagina ,.boton-pagina-location,.boton-pagina-episode{
+    position: relative;
+    top: 0;
+    margin: 2px;
+    left: 0;
+    z-index: 20;
+    width: auto;
+    min-width: 5%;
+    height: 40px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+
+    }
+    .guia{
+        background-color: orange;
+    }
+.boton-pagina:hover{
+    background-color: lightgreen;
+}
+.color_vivo_green{
+    color: green;
+}
+
+.color_vivo_red{
+    color: red;
+}
+.color_vivo_gray{
+    color: gray;
+}

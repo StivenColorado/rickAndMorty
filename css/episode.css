@@ -1,0 +1,9 @@
+.image-episode{
+    width: 90%;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+.banner{
+    justify-content: flex-start;
+    padding-top: 5%;
+}

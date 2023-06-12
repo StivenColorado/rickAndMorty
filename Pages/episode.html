@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/target_episode.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/episode.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="shortcut icon" href="../img/morty_icon.png" type="image/x-icon">
+    <title>Rick & Morty - episode</title>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <!--aqui esta el nav, banner esta con display flex -->
+            <nav>
+                <div class="container">
+                    <div class="img-logo">
+                        <img class="logo" src="../img/logoburnedinleft.png" alt="logo" />
+                    </div>
+                    <ul class="links">
+                        <li class="link">
+                            <a class="url" href="../index.html">Personajes</a>
+                        </li>
+                        <li class="link"><a class="url" href="./locations.html">Locaciones</a></li>
+                        <li class="link">
+                            <a class="url" href="#">Episodios</a>
+                        </li>
+                    </ul>
+                    <div class="toggle">
+                        <img onclick="openNav()" src="../img/lista.png" class="menu" alt="menu" />
+                    </div>
+                </div>
+                <div class="overlay" id="mobile-menu">
+                    <div class="derecha">
+                        <img onclick="closeNav()" src="../img/cerrar.png" class="cerrar" alt="close" />
+                    </div>
+                    <div class="overlay-content">
+                        <a href="../index.html">Personajes</a>
+                        <a href="./locations.html">Locaciones</a>
+                        <a href="./episode.html">Episodios</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--este contenedor se reutilizara -->
+    <!--este contenedor se reutilizara -->
+    <div class="pantalla-negra"></div>
+    <!--cuando se presione buscar-->
+    <div class="pantalla" id="pantalla">
+        <span class="sub_footer_info"> creado 0202 </span>
+        <div class="info" id="info_personaje">
+            <div class="btn_close">X</div>
+            <div class="container-img-character">
+                <h1>Personajes</h1>
+                <div class="container-photos">
+                </div>
+            </div>
+            <div class="texto">
+                <h1 class="title">Title</h1>
+                <p class="air_date"></p>
+                <p class="num_episode"></p>
+                <p class="num_character"></p>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="titulo_main">Personajes</h1>
+    <main></main>
+    <div class="contenedor_paginador">
+        <div class="pagination">
+            <p>pages</p>
+        </div>
+    </div>
+    <footer>
+        <div class="info-footer">
+            <h1 class="character-count">Personajes: 811</h1>
+            <h1 class="location-count">locaiones: 128</h1>
+            <h1 class="episodes-acount">Episodios: 51</h1>
+        </div>
+        <div class="contenedor-iconos">
+            <span class="icon --1"></span>
+            <span class="icon --2"></span>
+            <span class="icon --3"></span>
+        </div>
+        <div class="contenedor-nombres">
+            <ul>
+                <li>
+                    <> By StivenC
+                </li>
+                <li>
+                    <> By Ricardo
+                </li>
+                <li>
+                    <> By JuanD
+                </li>
+                <li>
+                    <> By JhonH
+                </li>
+            </ul>
+        </div>
+        <div class="contenedor-nombres">
+            <ul>
+                <li>@copyright - 2023</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/menu2.js"></script>
+    <script src="../js/nav-bar.js"></script>
+    <script src="../js/showEpisode.js"></script>
+    <script src="../js/episode.js"></script>
+    <script src="../js/keyPressed.js"></script>
+    <script src="../js/redireccionar.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
