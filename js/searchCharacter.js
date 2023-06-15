@@ -90,6 +90,9 @@ const searchCharacter = () => {
 };
 
 const buscar = () =>{
+  if(innerWidth>680){
+    searchCharacter()
+  }
   console.log(status_search)
   if(status_search == false){
     status_search = true
@@ -99,6 +102,7 @@ const buscar = () =>{
     status_search == false
     searchCharacter()
   }
+  
 }
 
 document.body.addEventListener('scroll',() => status_search = false)
