@@ -1,4 +1,7 @@
+let status_search = false
 const searchCharacter = () => {
+  console.log('se buscó')
+  status_search = false
   let characterName = document.querySelector('#input_character_name').value.toLowerCase().trim();
   let paginador = document.querySelector('.contenedor_paginador')
   let sizeScreen = innerWidth; 
@@ -71,10 +74,9 @@ const searchCharacter = () => {
       //alert("No se encontraron personajes con ese nombre.");
     }
   };
-
   const processError = (error) => {
     console.error(error);
-    alert("Ocurrió un error al buscar los personajes.");
+    alert("No se encontraron personajes, verifica tu conexion o tu busqueda");
   };
 
   fetch(`https://rickandmortyapi.com/api/character?page=1&name=${characterName}`)
@@ -86,3 +88,18 @@ const searchCharacter = () => {
       processError(error);
     });
 };
+
+const buscar = () =>{
+  console.log(status_search)
+  if(status_search == false){
+    status_search = true
+    return
+  }
+  if(status_search == true){
+    status_search == false
+    searchCharacter()
+  }
+}
+
+document.body.addEventListener('scroll',() => status_search = false)
+document.body.addEventListener('touchmove',() => status_search = false)
