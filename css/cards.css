@@ -11,7 +11,7 @@ main {
     background-image:linear-gradient(#6BB551 40%,#2b4e63 60%);
     border-radius:12px ;
 }
-.img-card{
+.img-container{
     display: flex;
     justify-content: center;
     align-items: center;

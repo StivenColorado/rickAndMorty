@@ -84,7 +84,6 @@ const obtener = (id) => {
 let articles = document.querySelectorAll('article');
 document.body.addEventListener('click', (e) => {
     if (e.target.className === 'image-episode' && e.target.className != "icon-search" && e.target.className != "img_person") {
-        console.log(e.target.id)
         estado = true
         let id_character = e.target.id;
         obtener(id_character);

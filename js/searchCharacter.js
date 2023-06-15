@@ -1,5 +1,6 @@
 const searchCharacter = () => {
   let characterName = document.querySelector('#input_character_name').value.toLowerCase().trim();
+  let paginador = document.querySelector('.contenedor_paginador')
   let sizeScreen = innerWidth; 
   if (characterName.length === 0) {
     //alert("Por favor, ingrese un nombre de personaje para buscar.");
@@ -63,6 +64,7 @@ const searchCharacter = () => {
         const article = document.createRange().createContextualFragment(/*html*/ content);
         main.appendChild(article);
         clase = "color_vivo";
+        paginador.innerHTML = ""
       });
       
     } else {

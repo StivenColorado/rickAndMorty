@@ -82,7 +82,7 @@ informacion de los episodios
     width: 38%;
     height: 60%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
@@ -96,7 +96,6 @@ informacion de los episodios
   }
   .container-photos {
     /* Resto de estilos */
-  
     /* Cambiar el estilo del scrollbar */
     scrollbar-width: thin; /* Ancho del scrollbar */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Color del thumb y track del scrollbar */
@@ -121,8 +120,6 @@ informacion de los episodios
   .container-photos::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.7); /* Color del thumb del scrollbar al pasar el cursor */
   }
-  
-  
   .img_person {
     width: 100%;
     height: auto;
@@ -190,4 +187,13 @@ informacion de los episodios
     font-style: italic;
     border-radius: 25rem 25rem 0rem 0rem;
   }
-  
+  @media (max-width:500px) {
+      .texto{
+        justify-content: center;
+        height: 30%;
+        text-align: center;
+      }
+      .info{
+        justify-content: flex-start;
+      }
+  }

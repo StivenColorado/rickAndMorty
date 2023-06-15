@@ -1,3 +1,5 @@
+let loading = document.querySelector('.loading');
+
 function getEpisodes(page, done) {
   const apiUrl = `https://rickandmortyapi.com/api/episode?page=${page}`;
   fetch(apiUrl)
@@ -28,6 +30,7 @@ function asignarImagen(numero) {
   }
 }
 
+loading.style.display = 'flex'
 function displayEpisodes(episodes) {
   const main = document.querySelector("main");
   main.innerHTML = ""; // Limpiar el contenido principal antes de agregar los episodios
@@ -50,6 +53,7 @@ function displayEpisodes(episodes) {
       `);
     main.append(article);
   });
+  loading.style.animation = 'desvanecer 1s alternate ease-in forwards'
 }
 
 function displayPaginationEpisodes(totalPages) {

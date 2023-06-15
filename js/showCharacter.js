@@ -54,12 +54,16 @@ const obtener = (id) => {
   fetch(`https://rickandmortyapi.com/api/character/${id}`)
     .then(response => response.json())
     .then(data => {
+      img_element.className = "img_person"
       if(data.status == 'Alive') {
         state_element.style.color = 'green'
+        img_element.classList.add('Alive')
       }else if(data.status == "Dead"){
         state_element.style.color = 'red'
+        img_element.classList.add('Dead')
       }else{
         state_element.style.color = 'gray'
+        img_element.classList.add('unknown')
       }
       //console.log(data); // Aquí puedes trabajar con los datos del personaje obtenidos de la API
       img_element.src = `${data.image}`;

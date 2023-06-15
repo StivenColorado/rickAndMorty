@@ -81,7 +81,7 @@ background: radial-gradient(circle, rgb(4, 20, 4) 0%, rgb(4 8 20) 100%);
   opacity: 0;
 }
 .container-img-character{
-  width: 38%;
+  width: 35%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -153,10 +153,19 @@ background: radial-gradient(circle, rgb(4, 20, 4) 0%, rgb(4 8 20) 100%);
 .img_person {
   width: 100%;
   height: 100%;
-  border-radius: 0.5em;
+  border-radius: 50%;
   clip-path: circle();
   background-size: 100% 100%;
   object-fit: cover;
+}
+.Alive{
+  border: solid 15px green;
+}
+.Dead{
+  border: solid 15px red;
+}
+.unknown{
+  border: solid 15px gray;
 }
 @keyframes close_animation {
   from {
@@ -184,6 +193,7 @@ background: radial-gradient(circle, rgb(4, 20, 4) 0%, rgb(4 8 20) 100%);
   color: white;
   clip-path: circle();
   background-color: rgba(184, 17, 17, 0.541);
+  user-select: none;
 }
 .btn_close:hover {
   animation: close_animation 1s alternate forwards;
@@ -191,7 +201,7 @@ background: radial-gradient(circle, rgb(4, 20, 4) 0%, rgb(4 8 20) 100%);
 .texto {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 45%;
   height: 70%;

@@ -1,4 +1,9 @@
+let loading = document.querySelector('.loading');
+
+
+
 let sizeScreen = innerWidth
+let icon = document.querySelector('.logo')
 console.log(sizeScreen)
 function getCharacters(page, done) {
   const apiUrl = `https://rickandmortyapi.com/api/character?page=${page}`;
@@ -9,6 +14,7 @@ function getCharacters(page, done) {
     });
 }
 
+loading.style.display = 'flex'
 function displayCharacters(characters) {
   let clase = "color_vivo"
   const main = document.querySelector("main");
@@ -57,9 +63,11 @@ function displayCharacters(characters) {
       </article>
     `);
       main.append(article);
+      
     }
     clase = "color_vivo"
   });
+  loading.style.animation = 'desvanecer 1s alternate ease-in forwards' 
 }
 
 function changePage(page) {
@@ -159,4 +167,5 @@ changePage(1); // Mostrar la primera página de personajes
 window.addEventListener('resize', function() {
   changePage(1);
 });
+icon.addEventListener('click', () => window.location = "./index.html")
   

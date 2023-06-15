@@ -6,3 +6,37 @@
     cursor: url('../IMG/cursor.png'), auto;
     scroll-behavior: smooth;
 }
+@keyframes desvanecer {
+    from {
+        display: flex;
+        z-index: 12000;
+    }
+    to {
+        z-index: -1000;
+        opacity: 0;
+    }
+}
+.loading {
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12000;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/loading_rick.gif');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-color: #010024;
+    animation-delay: 1s;
+    /*
+    animation:desvanecer 1s alternate ease forwards;
+*/
+}
+
+.loading-animation {
+    animation: desvanecer 1s infinite ease-in forwards;
+  }
