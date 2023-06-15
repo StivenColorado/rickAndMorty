@@ -51,7 +51,7 @@ select {
 @media(max-width:912px) and (max-height:961px) {
     .icon {
         width: 70px;
-        height: 42px;
+        height:100%;
     }
 
     footer {
@@ -94,7 +94,6 @@ select {
     .banner {
         height: 315px;
     }
-
     footer {
         height: 280px;
     }
@@ -123,12 +122,11 @@ select {
     #location_f {
         position: relative;
         top: -15%;
-        width: 90%;
+        width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     #lang {
         width: 90%;
         height: 100%;
@@ -137,7 +135,6 @@ select {
     select>option {
         height: 3em;
     }
-
     .icon {
         width: 15%;
         height: 100%;

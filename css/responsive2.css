@@ -152,7 +152,7 @@
         width: 110%;
     }
     .banner{
-        justify-content: space-between;
+        justify-content: space-evenly;
         height: 40vh;
     }
     .banner::after{
@@ -238,12 +238,15 @@
         height: 40%;
     }
     #lang{
-        height: 43%;
+        height: 100%;
+    }
+    .image-container-location img{
+        width: 85%;
     }
 }
 @media (max-width:414px){
     #lang{
-        height: 46%;
+        height: 100%;
     }
     .icon{
         width: 60px;
@@ -251,20 +254,20 @@
 }
 @media (max-width:375px){
     #lang{
-        height: 62%;
+        height: 100%;
     }
     .icon{
-        width:60px;
+        width:20%;
     }
 }
 @media (max-width:360px){
     #lang{
-        height: 55%;
+        height: 100%;
     }
 }
 @media (max-width:550px){
     .banner{
-        justify-content: space-between;
+        justify-content: space-evenly;
         height: 35vh;
     }
     .banner::after{
@@ -286,7 +289,7 @@
     }
     .icon{
         width: 77px;
-        height: 36px;
+        height: 100%;
     }
 }
 @media (max-width: 414px){
@@ -299,12 +302,12 @@
 }
 @media (max-width:390px){
     .icon {
-        height: 51px;
+        height: 100%;
     }
 }
 @media (max-width:345px){
     .icon {
-        height: 46px;
+        height: 100%;
     }
 }
 @media (max-width:500px) {
@@ -321,13 +324,18 @@
     .iconNav{
         width: 40%;
     }
-
     .img_person{
         width:70%;
     }
     .container-gender-specie{
         width: 70%;
         height: 32%;
+    }
+    .banner{
+        justify-content: space-between;
+    }
+    .state{
+        min-height: 13%;
     }
 }
 @media (max-width:480px) {

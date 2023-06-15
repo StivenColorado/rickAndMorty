@@ -251,7 +251,7 @@
     .info {
         flex-direction: column;
         width: 100%;
-        height: 90%;
+        height: 94%;
         border-radius: 0;
     }
 
@@ -345,8 +345,8 @@
     }
 
     .banner::after {
-        height: 42vh;
-        bottom: 63%;
+        height: 60vh;
+        bottom: 59%;
     }
 
     main {
@@ -360,16 +360,12 @@
 
     .container-img-character {
         width: 60%;
+        height: 40%;
     }
 
     .img_person {
-        width: 50%;
-    }
-}
-
-@media (max-width:540px) {
-    .img_person {
-        width: 95%;
+        width: 76%;
+        height: 100%;
     }
 }
 
@@ -377,13 +373,11 @@
     main {
         grid-template-columns: 1fr 1fr;
     }
-
     .btn,
     .btn_close_nav {
         font-size: 40px;
         width: 20%;
     }
-
     .btn {
         background-size: 60%;
     }
@@ -391,14 +385,16 @@
     .iconNav {
         width: 40%;
     }
-
     .img_person {
-        width: 70%;
+        width: 80%;
+        height: 100%;
     }
-
     .container-gender-specie {
         width: 70%;
         height: 32%;
+    }
+    .state{
+        min-height: 13%;
     }
 }
 
@@ -436,7 +432,8 @@
 
 @media (max-width:414px) {
     .img_person {
-        width: 155%;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -518,19 +515,20 @@
 
 @media (max-width:393px) {
     .img_person {
-        width: 158%;
+        width: 100%;
     }
 }
 
 @media (max-width:375px) {
     .img_person {
-        width: 125%;
+        width: 100%;
     }
 }
 
 @media (max-width:360px) {
     .img_person {
-        width: 144%;
+        width: 100%;
+        height: 100%;
     }
 }
 

@@ -1,9 +1,9 @@
 let loading = document.querySelector('.loading')
-
+let sizeScreen = innerWidth
+console.log(sizeScreen)
 const searchCharactersByLocation = () => {
     const selectedLocation = document.querySelector('#lang').value;
     const url = `https://rickandmortyapi.com/api/character?location=${selectedLocation}`;
-
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -60,7 +60,7 @@ function getCharacters(location, done) {
                 }
                 done(characters);
             });
-            loading.style.animation = 'desvanecer 1s alternate ease-in forwards' 
+            loading.style.animation = 'desvanecer 1s alternate ease-in forwards'
         });
 }
 
@@ -79,26 +79,40 @@ function displayCharacters(characters) {
         if (personaje.status == "unknown") {
             clase += "_gray"
         }
-        const article = document.createRange().createContextualFragment(/*html*/`
-        <article>
-          <div class="image-container-location">
-            <img  id="${personaje.id}" class="image" src="${personaje.image}" alt="Personaje">
-          </div>
-          <div class="info_personaje">
-            <h2>${personaje.name}</h2>
-            <div class="optional">
-              <span><b>Género:</b> ${personaje.gender}</span>
-            </div>
-            <div class="optional">
-              <span><b>Estado:</b> <span class=${clase}>${personaje.status}</span></span>
-            </div>
-            <div class="optional">
-              <span><b>Localización:</b> ${personaje.location.name}</span>
-            </div>
-          </div>
-        </article>
-      `);
-        main.append(article);
+        if (sizeScreen > 700) {
+            const article = document.createRange().createContextualFragment(/*html*/`
+                <article>
+                <div class="image-container-location">
+                    <img  id="${personaje.id}" class="image" src="${personaje.image}" alt="Personaje">
+                </div>
+                <div class="info_personaje">
+                    <h2>${personaje.name}</h2>
+                    <div class="optional">
+                    <span><b>Género:</b> ${personaje.gender}</span>
+                    </div>
+                    <div class="optional">
+                    <span><b>Estado:</b> <span class=${clase}>${personaje.status}</span></span>
+                    </div>
+                    <div class="optional">
+                    <span><b>Localización:</b> ${personaje.location.name}</span>
+                    </div>
+                </div>
+                </article>
+            `);
+            main.append(article);
+        } else {
+            const article = document.createRange().createContextualFragment(/*html*/`
+                <article>
+                <div class="image-container-location">
+                    <img  id="${personaje.id}" class="image" src="${personaje.image}" alt="Personaje">
+                </div>
+                <div class="info_personaje">
+                    <h2>${personaje.name}</h2>
+                </div>
+                </article>
+            `);
+            main.append(article);
+        }
         clase = "color_vivo"
     });
 }
