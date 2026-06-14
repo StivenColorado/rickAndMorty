@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 /** Estados compartidos: cargando (spinner propio de Rick), error, vacío y skeletons. */
 
 export function Spinner({ label = 'Cargando…' }: { label?: string }) {
@@ -5,7 +7,7 @@ export function Spinner({ label = 'Cargando…' }: { label?: string }) {
     <div className="flex flex-col items-center justify-center gap-3 py-16 text-slate-400">
       {/* Spinner propio del proyecto: el gif de Rick en portal */}
       <img
-        src="/img/loading_rick.gif"
+        src={asset('img/loading_rick.gif')}
         alt=""
         className="h-24 w-24 rounded-full object-cover ring-2 ring-portal/40"
       />

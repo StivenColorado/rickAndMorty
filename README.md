@@ -50,6 +50,16 @@ pnpm preview     # previsualizar el build
 > hacia `https://rickandmortyapi.com` para evitar problemas de CORS. En producción se
 > consume el endpoint directamente (soporta CORS).
 
+## Despliegue (GitHub Pages)
+
+El repositorio incluye un workflow (`.github/workflows/deploy.yml`) que construye y
+publica el sitio en cada push a `main`. La app vive en el subpath `/rickAndMorty/`, por
+lo que el build usa `base: '/rickAndMorty/'` y **HashRouter** (rutas tipo `#/stats`) para
+evitar 404 de rutas en Pages.
+
+**Activación (una sola vez):** en GitHub → *Settings → Pages → Build and deployment →
+Source* selecciona **GitHub Actions**. URL final: `https://stivencolorado.github.io/rickAndMorty/`.
+
 ## Estructura
 
 ```
